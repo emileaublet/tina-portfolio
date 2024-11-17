@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Projects = () => {
   return (
-    <div className="mt-24 container grid grid-cols-2 gap-8">
+    <div className="mt-24 container grid grid-cols-1 md:grid-cols-2 gap-8">
       <button className="w-full relative aspect-video rounded-xl overflow-hidden group/project">
         <Image
           className="saturate-0 opacity-40 transition-all group-hover/project:saturate-100 group-hover/project:opacity-100"
