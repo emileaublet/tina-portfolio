@@ -1,5 +1,6 @@
 import { Link } from "@/components/link";
 import { Projects } from "@/components/projects";
+import { Resume } from "@/components/resume";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 
@@ -49,6 +50,7 @@ export default function Home() {
         </header>
       </main>
       <Projects />
+      <Resume />
     </>
   );
 }

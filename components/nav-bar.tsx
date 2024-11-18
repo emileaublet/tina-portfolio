@@ -11,10 +11,17 @@ export const NavBar = () => {
         <div className="grow flex justify-end items-center gap-6">
           <Link
             withArrow={false}
-            href="/projects"
+            href="/#projects"
             className="text-neutral-500 group-hover/nav:text-black "
           >
             Projects
+          </Link>
+          <Link
+            withArrow={false}
+            href="/#education"
+            className="text-neutral-500 group-hover/nav:text-black "
+          >
+            Education
           </Link>
           <Link
             withArrow={false}

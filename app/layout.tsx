@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { BalanceProvider } from "@/components/balance-provider";
 import { Nav } from "tinacms";
 import { NavBar } from "@/components/nav-bar";
+import { Footer } from "@/components/footer";
 
 const fontSans = Rethink_Sans({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
           <BalanceProvider>
             <NavBar />
             {children}
+            <Footer />
           </BalanceProvider>
         </ThemeProvider>
       </body>

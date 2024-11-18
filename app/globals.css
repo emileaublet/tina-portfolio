@@ -3,7 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  * {
+    scroll-behavior: smooth;
+  }
   body {
-    @apply bg-neutral-100 dark:bg-black selection:bg-primary-500 selection:text-black mb-64;
+    @apply bg-neutral-100 dark:bg-black selection:bg-primary-500 selection:text-black;
   }
 }
