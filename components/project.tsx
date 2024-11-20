@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export type ProjectProps = {
   title: string;
-  description: string;
+  description?: string | null;
   image: string;
   slug: string;
 };
@@ -17,6 +17,7 @@ export const Project = ({ title, description, image, slug }: ProjectProps) => {
       <Image
         className="saturate-0 opacity-40 transition-all group-hover/project:saturate-100 group-hover/project:opacity-100 object-cover"
         fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         src={image}
         alt={title}
       />

@@ -5,9 +5,9 @@ import { Rethink_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { BalanceProvider } from "@/components/balance-provider";
-import { Nav } from "tinacms";
 import { NavBar } from "@/components/nav-bar";
 import { Footer } from "@/components/footer";
+import client from "@/tina/__generated__/client";
 
 const fontSans = Rethink_Sans({
   subsets: ["latin"],
@@ -15,10 +15,16 @@ const fontSans = Rethink_Sans({
   display: "swap",
   adjustFontFallback: false,
 });
-export const metadata: Metadata = {
-  title: "Jeffrey Julio-Vietz",
-  description: "",
-};
+
+export async function generateMetadata(): Promise<Metadata> {
+  const { data } = await client.queries.global({
+    relativePath: "settings.json",
+  });
+  return {
+    title: data.global.metaTitle,
+    description: data.global.metaDescription,
+  };
+}
 
 export default function RootLayout({
   children,
