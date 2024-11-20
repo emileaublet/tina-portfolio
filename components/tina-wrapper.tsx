@@ -16,7 +16,7 @@ export const TinaMd = ({
       components={{
         section: (props: any) => (
           <section>
-            <h2 className="text-red-500">{props.title}</h2>
+            <h2>{props.title}</h2>
             <TinaMd content={props.children} />
           </section>
         ),

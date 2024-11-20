@@ -8,7 +8,7 @@ export const Footer = async () => {
   });
 
   return (
-    <footer className="bg-neutral-950 mt-20">
+    <footer className="bg-neutral-900 mt-20 relative ">
       <div className="container py-12">
         <div className=" text-primary-500 font-extrabold text-5xl md:text-7xl flex justify-start gap-16">
           <TinaMd content={data.global.footerText} />

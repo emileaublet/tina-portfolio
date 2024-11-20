@@ -15,6 +15,14 @@ const config = {
       },
     },
     extend: {
+      transitionDuration: {
+        "2000": "2000ms",
+      },
+
+      boxShadow: (utils) => ({
+        navoff: "0 0 0 2px transparent",
+        nav: `0 0 0 2px ${utils.theme("colors.primary.500")}`,
+      }),
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
@@ -35,7 +43,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 } satisfies Config;
 
 export default config;
