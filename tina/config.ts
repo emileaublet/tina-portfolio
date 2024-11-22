@@ -23,6 +23,7 @@ export default defineConfig({
     tina: {
       mediaRoot: "",
       publicFolder: "public",
+      static: false,
     },
   },
   schema: {
