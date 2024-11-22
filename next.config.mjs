@@ -2,10 +2,13 @@
 const nextConfig = {
   rewrites: async () => [
     {
-      source: '/admin',
-      destination: '/admin/index.html',
+      source: "/admin",
+      destination: "/admin/index.html",
     },
   ],
-}
+  images: {
+    domains: ["assets.tina.io"],
+  },
+};
 
-export default nextConfig
+export default nextConfig;
