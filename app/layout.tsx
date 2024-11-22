@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Rethink_Sans } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
@@ -52,6 +53,7 @@ export default function RootLayout({
             <Footer />
           </BalanceProvider>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
