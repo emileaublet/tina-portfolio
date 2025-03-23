@@ -1,9 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { HomepageQuery } from "@/tina/__generated__/types";
 import { TinaMd } from "./tina-wrapper";
@@ -24,7 +22,7 @@ export const HomepageHeader = (props: HomepageHeaderProps) => {
   });
 
   return (
-    <header className="md:grid md:grid-cols-7">
+    <header className="md:grid md:grid-cols-8 gap-12 mt-16">
       <Image
         src={data.homepage.heroImage}
         data-tina-field={tinaField(data.homepage, "heroImage")}
@@ -32,10 +30,10 @@ export const HomepageHeader = (props: HomepageHeaderProps) => {
         width={400}
         height={400}
         priority
-        className="mx-auto col-span-3 w-full md:ml-auto md:mr-0"
+        className="mx-auto col-span-3 w-full md:ml-auto md:mr-0 rounded-full"
       />
 
-      <div className="col-span-4 xl:col-span-4 md:mt-6 lg:mt-10 xl:mt-16">
+      <div className="col-span-4 xl:col-span-4">
         <Balancer
           as="h1"
           data-tina-field={tinaField(data.homepage, "title")}

@@ -137,6 +137,84 @@ export default defineConfig({
             description: "The main body content for the homepage.",
             isBody: true,
           },
+          {
+            type: "string",
+            name: "featuresTitle",
+            label: "Features Title",
+            required: true,
+            description: "The title for the features section.",
+          },
+          {
+            type: "object",
+            name: "features",
+            label: "Features",
+            list: true,
+            fields: [
+              {
+                type: "object",
+                name: "feature",
+                label: "Feature",
+                fields: [
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Title",
+                    required: true,
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                    required: true,
+                    list: true,
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "string",
+            name: "achievementsTitle",
+            label: "Achievements Title",
+            required: true,
+            description: "The title for the achievements section.",
+          },
+          {
+            type: "object",
+            name: "achievements",
+            label: "Achievements",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "certification",
+                label: "Certification",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "entity",
+                label: "Entity",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "date",
+                label: "Date",
+                required: true,
+              },
+              {
+                type: "string",
+                name: "url",
+                label: "URL",
+              },
+              {
+                type: "string",
+                name: "urlDescription",
+                label: "Url Description",
+              },
+            ],
+          },
         ],
       },
       {

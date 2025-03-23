@@ -33,7 +33,7 @@ const ResumeItem = ({
 }) => {
   return (
     <div className="mt-6 flex items-center gap-4 ml-4 relative" id="education">
-      <div className="absolute size-2 rounded-full bg-primary-500 top-2.5 -left-6" />
+      <div className="absolute size-2 rounded-full bg-primary-500 top-2.5 -left-4" />
       <div>
         <h3 className="text-xl font-semibold">{title}</h3>
         <p className="text-lg text-neutral-600 dark:text-neutral-400">

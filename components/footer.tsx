@@ -1,6 +1,5 @@
 import client from "@/tina/__generated__/client";
 import { TinaMd } from "./tina-wrapper";
-import { tinaField } from "tinacms/dist/react";
 
 export const Footer = async () => {
   const { data } = await client.queries.global({
